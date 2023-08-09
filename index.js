@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateLogo = require("./utils/generatelogo");
+const generateLogo = require("./lib/generatelogo");
 
 //Generate Questions for the Prompts for Text/Characters/Shapes
 const questions = [];
