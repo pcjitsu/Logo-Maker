@@ -7,6 +7,12 @@ const generateLogo = require("./utils/generatelogo");
 const questions = [];
 
 //Init Program
+function init() {
+  inquirer.prompt(questions).then((response) => {
+    console.log(response);
+    writeToFile("./utils/logo.svg", generateLogo(response));
+  });
+}
 //generateLogo();
 
 // ```md
