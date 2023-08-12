@@ -2,11 +2,15 @@
 const fs = require("fs");
 const { userInput, getInput } = require("./lib/input");
 const { Triangle, Circle, Square } = require("./lib/shapes");
-const { userInfo } = require("os");
 
 function generateLogo() {
   const userInput = getInput();
 
+  let shape;
+
+  shape.setColor(userInput.shapeColor);
+
+  const svgContent = shape.render();
   //
 }
 
