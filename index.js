@@ -40,6 +40,20 @@ async function generateLogo() {
 
   let shape;
 
+  switch (userInput.shape) {
+    case "Triangle":
+      shape = new Triangle();
+      break;
+    case "Circle":
+      shape = new Circle();
+      break;
+    case "Square":
+      shape = new Square();
+      break;
+    default:
+      console.log("Err");
+  }
+
   shape.setColor(userInput.shapeColor);
 
   const svgContent = shape.render();
