@@ -2,6 +2,31 @@
 const fs = require("fs");
 const { userInput, getInput } = require("./lib/input");
 const { Triangle, Circle, Square } = require("./lib/shapes");
+const inquirer = require("inquirer");
+
+const questions = [
+  {
+    type: "input",
+    name: "text",
+    message: "Enter up to three characters:",
+  },
+  {
+    type: "input",
+    name: "textColor",
+    message: "Enter text color (keyword or hex number):",
+  },
+  {
+    type: "list",
+    name: "shape",
+    message: "Please select the shape below",
+    choices: ["Triangle", "Circle", "Square"],
+  },
+  {
+    type: "input",
+    name: "shapeColor",
+    message: "Enter shape color (keyword or hex number):",
+  },
+];
 
 //function to create file
 function writeToFile(fileName, data) {
@@ -10,8 +35,8 @@ function writeToFile(fileName, data) {
   });
 }
 
-function generateLogo() {
-  const userInput = getInput();
+async function generateLogo() {
+  const userInput = await inquirer.prompt(questions);
 
   let shape;
 
