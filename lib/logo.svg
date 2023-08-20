@@ -1,1 +1,5 @@
-<polygon points="150, 18 244, 182 56, 182" fill="Red" />
+<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="25" cy="75" r="20" stroke="red" fill="Red" />
+    <text x="0" y="15" fill="undefined">undefined!</text>
+    </svg>
+    

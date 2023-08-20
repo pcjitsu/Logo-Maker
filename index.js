@@ -57,6 +57,8 @@ async function generateLogo() {
   shape.setColor(userInput.shapeColor);
 
   const svgContent = shape.render();
+
+  
   writeToFile("./lib/logo.svg", svgContent);
 }
 
