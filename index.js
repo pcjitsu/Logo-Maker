@@ -4,6 +4,7 @@ const { userInput, getInput } = require("./lib/input");
 const { Triangle, Circle, Square } = require("./lib/shapes");
 const inquirer = require("inquirer");
 
+//Defining questions to be used in CLI
 const questions = [
   {
     type: "input",
@@ -39,7 +40,7 @@ async function generateLogo() {
   const userInput = await inquirer.prompt(questions);
 
   let shape;
-
+  // Based on the user's selected shape, create an instance of the corresponding shape class.
   switch (userInput.shape) {
     case "Triangle":
       shape = new Triangle();
@@ -53,12 +54,11 @@ async function generateLogo() {
     default:
       console.log("Err");
   }
-
-  shape.setColor(userInput.shapeColor);
+  // Set the color and text properties of the selected shape instance based on user input.
+  shape.setColor(userInput.shapeColor, userInput.textColor, userInput.text);
 
   const svgContent = shape.render();
-
-  
+  // Write the generated SVG content to a file.
   writeToFile("./lib/logo.svg", svgContent);
 }
 
