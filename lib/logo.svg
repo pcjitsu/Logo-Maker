@@ -2,4 +2,3 @@
     <circle cx="25" cy="75" r="20" stroke="red" fill="Red" />
     <text x="25" y="75" fill="blue" text-anchor="middle" alignment-baseline="middle">AGZ</text>
 </svg>
-    
