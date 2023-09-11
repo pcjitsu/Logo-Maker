@@ -22,6 +22,7 @@ Just run a git clone from my github and run in your terminal
 
 ## Usage
 
+link to demo can be found here: (https://drive.google.com/file/d/1gz60tg5_fAaLDJWsdYYD-chnyTkwmotF/view)
 You use this app by running node from your terminal and then previewing the file from live server any other method of your choice
 
 ## Contributing
