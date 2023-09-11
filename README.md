@@ -30,7 +30,7 @@ I used OpenAI for checking, BCS Help, SMU Instructors, Mini Project
 
 ## Tests
 
-You test this app intitally by running jest during dex dez and then by using live server
+You test this app intitally by running npm test and then by using live server
 
 ## License
 
